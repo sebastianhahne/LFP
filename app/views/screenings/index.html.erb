@@ -1,0 +1,7 @@
+<h1>Insgesamt <%= @screenings.count %> Tests</h1>
+<ul>
+<% @screenings.each do |screening| %>
+  <li><%= link_to "Test vom #{screening.created_at}", screening_path(screening)%></li>
+<% end %>
+</ul>
+<a href="/" class="link"><span>zurück</span></a>

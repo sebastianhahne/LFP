@@ -3,6 +3,6 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :authentication_keys => [:username]
-
+  has_many :screenings
   validates :username, uniqueness: true
 end

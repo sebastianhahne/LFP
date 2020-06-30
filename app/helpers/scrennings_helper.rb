@@ -1,0 +1,2 @@
+module ScrenningsHelper
+end
