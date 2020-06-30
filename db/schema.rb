@@ -10,10 +10,44 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_30_104943) do
+ActiveRecord::Schema.define(version: 2020_06_30_111909) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "screenings", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "Fantasie"
+    t.integer "Realitaetsbezug"
+    t.integer "Selbstbild"
+    t.integer "Gefuehle"
+    t.integer "Schwingungsfaehigkeit"
+    t.integer "Aggressivitaet"
+    t.integer "Frustrationstoleranz"
+    t.integer "Stimmung"
+    t.integer "Motivation"
+    t.integer "Durchsetzung"
+    t.integer "Kontaktaufnahme"
+    t.integer "Regeln"
+    t.integer "Teamarbeit"
+    t.integer "Kritik"
+    t.integer "Aufmerksamkeit"
+    t.integer "Ausdauer"
+    t.integer "Konzentration"
+    t.integer "Merkfaehigkeit"
+    t.integer "sensWahrnehmun"
+    t.integer "Selbststaendigkeit"
+    t.integer "Flexibilitaet"
+    t.integer "Antrieb"
+    t.integer "Entscheidungsfaehigkeit"
+    t.integer "Feinmotorik"
+    t.integer "Selbstkontrolle"
+    t.integer "Problemloesen"
+    t.integer "Sorgfalt"
+    t.index ["user_id"], name: "index_screenings_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "username", default: "", null: false
@@ -27,4 +61,5 @@ ActiveRecord::Schema.define(version: 2020_06_30_104943) do
     t.index ["username"], name: "index_users_on_username", unique: true
   end
 
+  add_foreign_key "screenings", "users"
 end
