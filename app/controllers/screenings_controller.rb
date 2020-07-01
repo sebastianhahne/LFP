@@ -15,7 +15,7 @@ class ScreeningsController < ApplicationController
   end
 
   def index
-    @screenings = Screening.all
+    @screenings = Screening.where(user_id: current_user.id)
   end
 
   private

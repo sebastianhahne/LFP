@@ -18,6 +18,7 @@ end
 new_user.save!
 5.times do
   new_screening = Screening.new do |s|
+    x = rand(1..5)
     s.Fantasie = rand(1..5)
     s.Realitaetsbezug = rand(1..5)
     s.Selbstbild = rand(1..5)
@@ -45,6 +46,8 @@ new_user.save!
     s.Selbstkontrolle = rand(1..5)
     s.Problemloesen = rand(1..5)
     s.Sorgfalt = rand(1..5)
+    s.created_at = Time.new(2020,06,x)
+    x + 1
   end
 new_screening.user = new_user
 new_screening.save!
