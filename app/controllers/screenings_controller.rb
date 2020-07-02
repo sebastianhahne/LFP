@@ -16,6 +16,7 @@ class ScreeningsController < ApplicationController
 
   def index
     @screenings = Screening.where(user_id: current_user.id)
+    @json = @screenings.to_json
   end
 
   private

@@ -1,7 +1,60 @@
+<a href="/" class="link"><span>zurück</span></a>
 <h1>Insgesamt <%= @screenings.count %> Tests</h1>
 <ul>
 <% @screenings.each do |screening| %>
-  <li><%= link_to "Test vom #{screening.created_at}", screening_path(screening)%></li>
+  <li><%= link_to "Test vom #{screening.created_at.strftime("%d %b %Y")}", screening_path(screening)%></li>
 <% end %>
 </ul>
-<a href="/" class="link"><span>zurück</span></a>
+<br>
+
+<div id="werte">
+  <a href="" id="Fantasie">Fantasie</a>
+  <a href="" id="Regeln">Regeln</a>
+  <a href="" id="Ausdauer">Ausdauer</a>
+</div>
+
+<canvas id="line-chart" width="800" height="450"></canvas>
+
+<script>
+  var userchoice = document.getElementById("werte");
+  var chartData = <%= raw @json %>;
+  userchoice.addEventListener("click", (event) => {
+    arrayX = [];
+    arrayY = [];
+    var wert = event.target.textContent
+    for (i = 0; i < chartData.length; i++) {
+      var date = chartData[i].created_at;
+      date = date.split("T")[0];
+      arrayX.push(date);
+      arrayY.push(chartData[i][wert]);
+    } ;
+    console.log(arrayY);
+    event.preventDefault();
+    new Chart(document.getElementById("line-chart"), {
+      type: 'line',
+      data: {
+        labels: arrayX,
+        datasets: [{
+            data: arrayY,
+            label: `${wert}`,
+            borderColor: "#3e95cd",
+            fill: false
+          }
+        ]
+      },
+      options: {
+        scales: {
+          yAxes: [{
+            ticks: {
+                stepSize: 1
+            }
+          }]
+        },
+        title: {
+          display: true,
+          text: 'LFP'
+        }
+      }
+    });
+  });
+</script>
