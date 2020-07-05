@@ -1,0 +1,16 @@
+<h1>affektive / emotionale Fähigkeiten</h1>
+
+<%= form_for @screening, url: wizard_path do |f| %>
+<%= f.label :'affektive Schwingungsfähigkeit'%>
+<%= f.number_field 'Schwingungsfaehigkeit', in: 1...6 %>
+<%= f.label :Realitätsbezug%>
+<%= f.number_field 'Aggressivitaet', in: 1...6 %>
+<%= f.label :Selbstbild%>
+<%= f.number_field 'Frustrationstoleranz', in: 1...6 %>
+<%= f.label :'Stimmung / Gefühlslage' %>
+<%= f.number_field 'Stimmung', in: 1...6 %>
+<%= f.label :Motivation %>
+<%= f.number_field 'Motivation', in: 1...6 %>
+
+<%= f.submit "weiter" %>
+<% end %>

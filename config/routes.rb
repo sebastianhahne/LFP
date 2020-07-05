@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   root to: "pages#home"
 
   resources :screenings, only: [:create, :show, :new, :index]
+  resources :user_steps
 end

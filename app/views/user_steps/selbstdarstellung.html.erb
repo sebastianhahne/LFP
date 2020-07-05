@@ -1,0 +1,16 @@
+<h1>Selbstdarstellung / Selbstwahrnehmung</h1>
+
+<%= form_for @screening, url: wizard_path, method: :put do |f| %>
+<%= f.label :Fantasie%>
+<%= f.number_field 'Fantasie', in: 1...6 %>
+<%= f.label :Realitätsbezug%>
+<%= f.number_field 'Realitaetsbezug', in: 1...6 %>
+<%= f.label :Selbstbild%>
+<%= f.number_field 'Selbstbild', in: 1...6 %>
+<%= f.label :'Wahrnehmen und Äußern eigener Gefühle und Bedürfnisse' %>
+<%= f.number_field 'Gefuehle', in: 1...6 %>
+
+<%= f.submit "weiter" %>
+<% end %>
+
+

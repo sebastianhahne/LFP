@@ -6,12 +6,13 @@ class ScreeningsController < ApplicationController
 
   def create
     @screening = Screening.new(screening_params)
-    @screening.user = current_user
+    @screening.user_id = current_user.id
     @screening.save
   end
 
   def show
     @screening = Screening.find(params[:id])
+    # @screening.user = current_user
   end
 
   def index
