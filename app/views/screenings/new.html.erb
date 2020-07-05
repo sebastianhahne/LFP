@@ -1,2 +1,70 @@
-<h1>form hier</h1>
-<a href="/" class="link"><span>zurück</span></a>
+<h1>Neues Profil</h1>
+
+<%= form_for @screening do |f| %>
+
+<h2>Selbstdarstellung / Selbstwahrnehmung</h2>
+<%= f.label :Fantasie%>
+<%= f.number_field 'Fantasie', in: 1...6 %>
+<%= f.label :Realitätsbezug%>
+<%= f.number_field 'Realitaetsbezug', in: 1...6 %>
+<%= f.label :Selbstbild%>
+<%= f.number_field 'Selbstbild', in: 1...6 %>
+<%= f.label :'Wahrnehmen und Äußern eigener Gefühle und Bedürfnisse' %>
+<%= f.number_field 'Gefuehle', in: 1...6 %>
+
+<h2>affektive / emotionale Fähigkeiten</h2>
+<%= f.label :'affektive Schwingungsfähigkeit'%>
+<%= f.number_field 'Schwingungsfaehigkeit', in: 1...6 %>
+<%= f.label :Aggressivität%>
+<%= f.number_field 'Aggressivitaet', in: 1...6 %>
+<%= f.label :Frustrationstoleranz%>
+<%= f.number_field 'Frustrationstoleranz', in: 1...6 %>
+<%= f.label :'Stimmung / Gefühlslage' %>
+<%= f.number_field 'Stimmung', in: 1...6 %>
+<%= f.label :Motivation%>
+<%= f.number_field 'Motivation', in: 1...6 %>
+
+<h2>soziale Fähigkeiten</h2>
+<%= f.label :Durchsetzungsvermögen%>
+<%= f.number_field 'Durchsetzung', in: 1...6 %>
+<%= f.label :Kontaktaufnahme%>
+<%= f.number_field 'Kontaktaufnahme', in: 1...6 %>
+<%= f.label :'Regeln einhalten'%>
+<%= f.number_field 'Regeln', in: 1...6 %>
+<%= f.label :'Teamarbeit / Kooperation'%>
+<%= f.number_field 'Teamarbeit', in: 1...6 %>
+<%= f.label :Kritik%>
+<%= f.number_field 'Kritik', in: 1...6 %>
+
+<h2>kognitive Fähigkeiten</h2>
+<%= f.label :Aufmerksamkeit%>
+<%= f.number_field 'Aufmerksamkeit', in: 1...6 %>
+<%= f.label :Ausdauer%>
+<%= f.number_field 'Ausdauer', in: 1...6 %>
+<%= f.label :Konzentration%>
+<%= f.number_field 'Konzentration', in: 1...6 %>
+<%= f.label :Merkfähigkeit%>
+<%= f.number_field 'Merkfaehigkeit', in: 1...6 %>
+<%= f.label :'sensorische Wahrnehmung'%>
+<%= f.number_field 'sensWahrnehmun', in: 1...6 %>
+<%= f.label :Sebstständigkeit%>
+<%= f.number_field 'Selbststaendigkeit', in: 1...6 %>
+<%= f.label :Flexibilität%>
+<%= f.number_field 'Flexibilitaet', in: 1...6 %>
+
+<h2>lebenspraktischer Bereich</h2>
+<%= f.label :Antrieb%>
+<%= f.number_field 'Antrieb', in: 1...6 %>
+<%= f.label :Entscheidungsfähigkeit%>
+<%= f.number_field 'Entscheidungsfaehigkeit', in: 1...6 %>
+<%= f.label :Feinmotorik%>
+<%= f.number_field 'Feinmotorik', in: 1...6 %>
+<%= f.label :'kritische Selbstkontrolle'%>
+<%= f.number_field 'Selbstkontrolle', in: 1...6 %>
+<%= f.label :Problemlösen%>
+<%= f.number_field 'Problemloesen', in: 1...6 %>
+<%= f.label :Sorgfalt%>
+<%= f.number_field 'Sorgfalt', in: 1...6 %>
+
+<%= f.submit "Fertig" %>
+<% end %>
