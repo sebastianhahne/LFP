@@ -1,0 +1,13 @@
+<div class="navbar">
+<%= link_to root_path do %>
+  <%= image_tag 'home.png', class: 'icon-link' %>
+<% end %>
+<%= link_to new_screening_path do %>
+  <%= image_tag 'plus.png', class: 'icon-link' %>
+<% end %>
+<%= link_to screenings_path do %>
+  <%= image_tag 'data.png', class: 'icon-link' %>
+<% end %>
+
+<%= link_to 'Logout', destroy_user_session_path, class: 'icon-link', method: :delete %>
+</div>

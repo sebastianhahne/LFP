@@ -2,6 +2,7 @@
 
 <%= form_for @screening do |f| %>
 
+<div class="profil-form">
 <h2>Selbstdarstellung / Selbstwahrnehmung</h2>
 <%= f.label :Fantasie%>
 <%= f.number_field 'Fantasie', in: 1...6 %>
@@ -11,6 +12,7 @@
 <%= f.number_field 'Selbstbild', in: 1...6 %>
 <%= f.label :'Wahrnehmen und Äußern eigener Gefühle und Bedürfnisse' %>
 <%= f.number_field 'Gefuehle', in: 1...6 %>
+</div>
 
 <h2>affektive / emotionale Fähigkeiten</h2>
 <%= f.label :'affektive Schwingungsfähigkeit'%>
