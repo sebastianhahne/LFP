@@ -1,19 +1,70 @@
-<a href="/" class="link"><span>zurück</span></a>
-<h1>Insgesamt <%= @screenings.count %> Tests</h1>
-<ul>
-<% @screenings.each do |screening| %>
-  <li><%= link_to "Test vom #{screening.created_at.strftime("%d %b %Y")}", screening_path(screening)%></li>
-<% end %>
-</ul>
-<br>
-
-<div id="werte">
-  <a href="" id="Fantasie">Fantasie</a>
-  <a href="" id="Regeln">Regeln</a>
-  <a href="" id="Ausdauer">Ausdauer</a>
+<h1>Auswertung</h1>
+<div class="container" id="werte">
+  <div class="cardwrapper-small">
+    <div class="category-small">
+      <h4>Selbstdarstellung / Selbstwahrnehmung</h4>
+    </div>
+    <div class="items">
+      <a href="" id="Fantasie">Fantasie</a>
+      <a href="" id="Realitaetsbezug">Realitätsbezug</a>
+      <a href="" id="Selbstbild">Selbstbild</a>
+      <a href="" id="Gefuehle">Wahrnehmen und Äußern eigener Gefühle und Bedürfnisse</a>
+    </div>
+  </div>
+  <div class="cardwrapper-small">
+    <div class="category-small">
+      <h4>affektive / emotionale Fähigkeiten</h4>
+    </div>
+    <div class="items">
+      <a href="" id="Schwingungsfaehigkeit">Schwingungsfähigkeit</a>
+      <a href="" id="Aggressivitaet">Aggressivität</a>
+      <a href="" id="Frustrationstoleranz">Frustrationstoleranz</a>
+      <a href="" id="Stimmung">Stimmung / Gefühlslage</a>
+      <a href="" id="Motivation">Motivation</a>
+    </div>
+  </div>
+  <div class="cardwrapper-small">
+    <div class="category-small">
+      <h4>soziale Fähigkeiten</h4>
+    </div>
+    <div class="items">
+      <a href="" id="Durchsetzung">Durchsetzungsvermögen</a>
+      <a href="" id="Kontaktaufnahme">Kontaktaufnahme</a>
+      <a href="" id="Regeln">Regeln einhalten</a>
+      <a href="" id="Teamarbeit">Teamarbeit / Kooperation</a>
+      <a href="" id="Kritik">Umgang mit Kritik</a>
+    </div>
+  </div>
+  <div class="cardwrapper-small">
+    <div class="category-small">
+      <h4>kognitive Fähigkeiten</h4>
+    </div>
+    <div class="items">
+      <a href="" id="Aufmerksamkeit">Aufmerksamkeit</a>
+      <a href="" id="Ausdauer">Ausdauer</a>
+      <a href="" id="Konzentration">Konzentration</a>
+      <a href="" id="Merkfaehigkeit">Merkfähigkeit</a>
+      <a href="" id="sensWahrnehmun">sensorische Wahrnehmung</a>
+      <a href="" id="Flexibilitaet">Flexibilität</a>
+    </div>
+  </div>
+  <div class="cardwrapper-small">
+    <div class="category-small">
+      <h4>lebenspraktischer Bereich</h4>
+    </div>
+    <div class="items">
+      <a href="" id="Antrieb">Antrieb</a>
+      <a href="" id="Ausdauer">Ausdauer</a>
+      <a href="" id="Entscheidungsfaehigkeit">Entscheidungsfähigkeit</a>
+      <a href="" id="Feinmotorik">Feinmotorik</a>
+      <a href="" id="Selbstkontrolle">kritische Selbstkontrolle</a>
+      <a href="" id="Problemloesen">Problemlösen</a>
+      <a href="" id="Sorgfalt">Sorgfalt</a>
+    </div>
+  </div>
 </div>
 
-<canvas id="line-chart" width="800" height="450"></canvas>
+<canvas id="line-chart" width="600" height="200"></canvas>
 
 <script>
   var userchoice = document.getElementById("werte");
@@ -21,7 +72,7 @@
   userchoice.addEventListener("click", (event) => {
     arrayX = [];
     arrayY = [];
-    var wert = event.target.textContent
+    var wert = event.target.id
     for (i = 0; i < chartData.length; i++) {
       var date = chartData[i].created_at;
       date = date.split("T")[0];

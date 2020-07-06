@@ -1,0 +1,63 @@
+// Place all the styles related to the scrennings controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+@import "config/colors";
+
+.profil-form {
+  width: 240 px;
+  display: inline-block;
+}
+
+.container {
+  display: flex;
+}
+
+.cardwrapper {
+  border-radius: 3px;
+  background-color: $apple;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  border: 1px solid $rich-black;
+  width: 300px;
+  height: 400px;
+  margin: 8px 8px;
+}
+
+.cardwrapper-small {
+  border-radius: 3px;
+  background-color: $apple;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  border: 1px solid $rich-black;
+  width: 300px;
+  height: 220px;
+  margin: 8px 8px;
+}
+
+
+.category {
+  height: 25%;
+  overflow: hidden;
+  background-size: cover;
+  text-align: center;
+  vertical-align: middle;
+  background-color: $mantis;
+  border-bottom: 1px solid $rich-black;
+}
+
+.category-small {
+  height: 25%;
+  overflow: hidden;
+  background-size: cover;
+  text-align: center;
+  vertical-align: middle;
+  background-color: $mantis;
+  border-bottom: 1px solid $rich-black;
+}
+
+.items {
+  padding: 4px 8px;
+  font-size: 18px;
+}
+.items a {
+  display: block;
+  color: $rich-black;
+}

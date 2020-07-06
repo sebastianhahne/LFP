@@ -1,0 +1,22 @@
+.icon-link {
+  color: $rich-black;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 28px;
+  text-decoration: none;
+}
+
+.navbar {
+  background-color: $mantis;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 80px;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 8px;
+}
+

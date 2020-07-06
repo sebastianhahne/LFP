@@ -1,44 +1,67 @@
-<h1>Test vom <%= @screening.created_at.strftime("%d %b %Y") %></h1>
-<div class="">
- <h2>Selbstdarstellung / Selbstwahrnehmung</h2>
- <p>Fantasie: <%= @screening.Fantasie %></p>
- <p>Realitätsbezug: <%= @screening.Realitaetsbezug %></p>
- <p>Selbstbild: <%= @screening.Selbstbild %></p>
- <p>Wahrnehmen und Äußern eigener Gefühle und Bedürfnisse: <%= @screening.Gefuehle %></p>
+<h1>Profil vom <%= @screening.created_at.strftime("%d %b %Y") %></h1>
+<div class="container">
+  <div class="cardwrapper">
+    <div class="category">
+      <h2>Selbstdarstellung / Selbstwahrnehmung</h2>
+    </div>
+    <div class="items">
+     <p>Fantasie: <%= @screening.Fantasie %></p>
+     <p>Realitätsbezug: <%= @screening.Realitaetsbezug %></p>
+     <p>Selbstbild: <%= @screening.Selbstbild %></p>
+     <p>Wahrnehmen und Äußern eigener Gefühle und Bedürfnisse: <%= @screening.Gefuehle %></p>
+    </div>
+  </div>
+  <div class="cardwrapper">
+    <div class="category">
+      <h2>affektive / emotionale Fähigkeiten</h2>
+    </div>
+    <div class="items">
+      <p>affektive Schwingungsfähigkeit: <%= @screening.Schwingungsfaehigkeit %></p>
+      <p>Aggressivität: <%= @screening.Aggressivitaet %></p>
+      <p>Frustrationstoleranz: <%= @screening.Frustrationstoleranz %></p>
+      <p>Stimmung / Gefühlslage: <%= @screening.Stimmung %></p>
+      <p>Motivation: <%= @screening.Motivation %></p>
+    </div>
+  </div>
+  <div class="cardwrapper">
+    <div class="category">
+      <h2>soziale Fähigkeiten</h2>
+    </div>
+    <div class="items">
+      <p>Durchsetzungsvermögen: <%= @screening.Durchsetzung %></p>
+      <p>Kontaktaufnahme: <%= @screening.Kontaktaufnahme %></p>
+      <p>Regeln einhalten: <%= @screening.Regeln %></p>
+      <p>Teamarbeit / Kooperation: <%= @screening.Teamarbeit %></p>
+      <p>Umgang mit Kritik: <%= @screening.Kritik %></p>
+    </div>
+  </div>
+  <div class="cardwrapper">
+    <div class="category">
+      <h2>kognitive Fähigkeiten</h2>
+    </div>
+    <div class="items">
+      <p>Aufmerksamkeit: <%= @screening.Aufmerksamkeit %></p>
+      <p>Ausdauer: <%= @screening.Ausdauer %></p>
+      <p>Konzentration: <%= @screening.Konzentration %></p>
+      <p>Merkfähigkeit: <%= @screening.Merkfaehigkeit %></p>
+      <p>sensorische Wahrnehmung: <%= @screening.sensWahrnehmun %></p>
+      <p>Sebstständigkeit: <%= @screening.Selbststaendigkeit %></p>
+      <p>Flexibilität: <%= @screening.Flexibilitaet %></p>
+    </div>
+  </div>
+  <div class="cardwrapper">
+    <div class="category">
+      <h2>lebenspraktischer Bereich</h2>
+    </div>
+    <div class="items">
+      <p>Antrieb: <%= @screening.Antrieb %></p>
+      <p>Entscheidungsfähigkeit: <%= @screening.Entscheidungsfaehigkeit %></p>
+      <p>Feinmotorik: <%= @screening.Feinmotorik %></p>
+      <p>kritische Selbstkontrolle: <%= @screening.Selbstkontrolle %></p>
+      <p>Problemlösen: <%= @screening.Problemloesen %></p>
+      <p>Sorgfalt: <%= @screening.Sorgfalt %></p>
+    </div>
+  </div>
 </div>
-<div class="">
- <h2>affektive / emotionale Fähigkeiten</h2>
- <p>affektive Schwingungsfähigkeit: <%= @screening.Schwingungsfaehigkeit %></p>
- <p>Aggressivität: <%= @screening.Aggressivitaet %></p>
- <p>Frustrationstoleranz: <%= @screening.Frustrationstoleranz %></p>
- <p>Stimmung / Gefühlslage: <%= @screening.Stimmung %></p>
- <p>Motivation: <%= @screening.Motivation %></p>
-</div>
-<div class="">
- <h2>soziale Fähigkeiten</h2>
- <p>Durchsetzungsvermögen: <%= @screening.Durchsetzung %></p>
- <p>Kontaktaufnahme: <%= @screening.Kontaktaufnahme %></p>
- <p>Regeln einhalten: <%= @screening.Regeln %></p>
- <p>Teamarbeit / Kooperation: <%= @screening.Teamarbeit %></p>
- <p>Umgang mit Kritik: <%= @screening.Kritik %></p>
-</div>
-<div class="">
- <h2>kognitive Fähigkeiten</h2>
- <p>Aufmerksamkeit: <%= @screening.Aufmerksamkeit %></p>
- <p>Ausdauer: <%= @screening.Ausdauer %></p>
- <p>Konzentration: <%= @screening.Konzentration %></p>
- <p>Merkfähigkeit: <%= @screening.Merkfaehigkeit %></p>
- <p>sensorische Wahrnehmung: <%= @screening.sensWahrnehmun %></p>
- <p>Sebstständigkeit: <%= @screening.Selbststaendigkeit %></p>
- <p>Flexibilität: <%= @screening.Flexibilitaet %></p>
-</div>
-<div class="">
- <h2>lebenspraktischer Bereich</h2>
- <p>Antrieb: <%= @screening.Antrieb %></p>
- <p>Entscheidungsfähigkeit: <%= @screening.Entscheidungsfaehigkeit %></p>
- <p>Feinmotorik: <%= @screening.Feinmotorik %></p>
- <p>kritische Selbstkontrolle: <%= @screening.Selbstkontrolle %></p>
- <p>Problemlösen: <%= @screening.Problemloesen %></p>
- <p>Sorgfalt: <%= @screening.Sorgfalt %></p>
-</div>
+
 <a href="/screenings" class="link"><span>zurück</span></a>
