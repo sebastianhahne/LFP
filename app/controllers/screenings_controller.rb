@@ -8,6 +8,7 @@ class ScreeningsController < ApplicationController
     @screening = Screening.new(screening_params)
     @screening.user = current_user
     @screening.save
+    redirect_to root_path
   end
 
   def show
