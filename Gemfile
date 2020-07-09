@@ -24,8 +24,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'devise'
 gem 'chartkick'
 gem 'groupdate'
-gem 'form_slider'
-gem 'jquery-ui-rails'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
