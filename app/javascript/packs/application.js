@@ -10,6 +10,10 @@ require("channels")
 require("chartkick")
 require("chart.js")
 
+//= require jquery
+//= require jquery.ui.slider
+//= require form_slider
+
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
 // or the `imagePath` JavaScript helper below.

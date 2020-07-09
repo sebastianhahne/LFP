@@ -1,72 +1,222 @@
+<div >
 <h1>Neues Profil</h1>
 
 <%= form_for @screening do |f| %>
+  <div class="container">
+    <div class="cardwrapper">
+      <div class="category">
+        <h2>Selbstdarstellung / Selbstwahrnehmung</h2>
+      </div>
+      <%= f.label :'Fantasie:'%><br>
+      <%= f.radio_button :Fantasie, 1%>1
+      <%= f.radio_button :Fantasie, 2%>2
+      <%= f.radio_button :Fantasie, 3%>3
+      <%= f.radio_button :Fantasie, 4%>4
+      <%= f.radio_button :Fantasie, 5%>5
+      <br>
+      <%= f.label :'Realitätsbezug:'%><br>
+      <%= f.radio_button :Realitaetsbezug, 1%>1
+      <%= f.radio_button :Realitaetsbezug, 2%>2
+      <%= f.radio_button :Realitaetsbezug, 3%>3
+      <%= f.radio_button :Realitaetsbezug, 4%>4
+      <%= f.radio_button :Realitaetsbezug, 5%>5
+      <br>
+      <%= f.label :'Selbstbild:'%><br>
+      <%= f.radio_button :Selbstbild, 1%>1
+      <%= f.radio_button :Selbstbild, 2%>2
+      <%= f.radio_button :Selbstbild, 3%>3
+      <%= f.radio_button :Selbstbild, 4%>4
+      <%= f.radio_button :Selbstbild, 5%>5
+      <br>
+      <%= f.label :'Wahrnehmen und Äußern eigener Gefühle und Bedürfnisse:' %><br>
+      <%= f.radio_button :Gefuehle, 1%>1
+      <%= f.radio_button :Gefuehle, 2%>2
+      <%= f.radio_button :Gefuehle, 3%>3
+      <%= f.radio_button :Gefuehle, 4%>4
+      <%= f.radio_button :Gefuehle, 5%>5
+    </div>
 
-<div class="profil-form">
-<h2>Selbstdarstellung / Selbstwahrnehmung</h2>
-<%= f.label :Fantasie%>
-<%= f.number_field 'Fantasie', in: 1...6 %>
-<%= f.label :Realitätsbezug%>
-<%= f.number_field 'Realitaetsbezug', in: 1...6 %>
-<%= f.label :Selbstbild%>
-<%= f.number_field 'Selbstbild', in: 1...6 %>
-<%= f.label :'Wahrnehmen und Äußern eigener Gefühle und Bedürfnisse' %>
-<%= f.number_field 'Gefuehle', in: 1...6 %>
-</div>
+    <div class="cardwrapper">
+      <div class="category">
+        <h2>affektive / emotionale Fähigkeiten</h2>
+      </div>
+      <%= f.label :'affektive Schwingungsfähigkeit:'%><br>
+      <%= f.radio_button :Schwingungsfaehigkeit, 1%>1
+      <%= f.radio_button :Schwingungsfaehigkeit, 2%>2
+      <%= f.radio_button :Schwingungsfaehigkeit, 3%>3
+      <%= f.radio_button :Schwingungsfaehigkeit, 4%>4
+      <%= f.radio_button :Schwingungsfaehigkeit, 5%>5
+      <br>
+      <%= f.label :'Aggressivität:'%><br>
+      <%= f.radio_button :Aggressivitaet, 1%>1
+      <%= f.radio_button :Aggressivitaet, 2%>2
+      <%= f.radio_button :Aggressivitaet, 3%>3
+      <%= f.radio_button :Aggressivitaet, 4%>4
+      <%= f.radio_button :Aggressivitaet, 5%>5
+      <br>
+      <%= f.label :'Frustrationstoleranz:'%><br>
+      <%= f.radio_button :Frustrationstoleranz, 1%>1
+      <%= f.radio_button :Frustrationstoleranz, 2%>2
+      <%= f.radio_button :Frustrationstoleranz, 3%>3
+      <%= f.radio_button :Frustrationstoleranz, 4%>4
+      <%= f.radio_button :Frustrationstoleranz, 5%>5
+      <br>
+      <%= f.label :'Stimmung / Gefühlslage:'%><br>
+      <%= f.radio_button :Stimmung, 1%>1
+      <%= f.radio_button :Stimmung, 2%>2
+      <%= f.radio_button :Stimmung, 3%>3
+      <%= f.radio_button :Stimmung, 4%>4
+      <%= f.radio_button :Stimmung, 5%>5
+      <br>
+      <%= f.label :'Motivation:'%><br>
+      <%= f.radio_button :Motivation, 1%>1
+      <%= f.radio_button :Motivation, 2%>2
+      <%= f.radio_button :Motivation, 3%>3
+      <%= f.radio_button :Motivation, 4%>4
+      <%= f.radio_button :Motivation, 5%>5
+    </div>
 
-<h2>affektive / emotionale Fähigkeiten</h2>
-<%= f.label :'affektive Schwingungsfähigkeit'%>
-<%= f.number_field 'Schwingungsfaehigkeit', in: 1...6 %>
-<%= f.label :Aggressivität%>
-<%= f.number_field 'Aggressivitaet', in: 1...6 %>
-<%= f.label :Frustrationstoleranz%>
-<%= f.number_field 'Frustrationstoleranz', in: 1...6 %>
-<%= f.label :'Stimmung / Gefühlslage' %>
-<%= f.number_field 'Stimmung', in: 1...6 %>
-<%= f.label :Motivation%>
-<%= f.number_field 'Motivation', in: 1...6 %>
+    <div class="cardwrapper">
+      <div class="category">
+        <h2>soziale Fähigkeiten</h2>
+      </div>
+      <%= f.label :'Durchsetzungsvermögen:'%><br>
+      <%= f.radio_button :Durchsetzung, 1%>1
+      <%= f.radio_button :Durchsetzung, 2%>2
+      <%= f.radio_button :Durchsetzung, 3%>3
+      <%= f.radio_button :Durchsetzung, 4%>4
+      <%= f.radio_button :Durchsetzung, 5%>5
+      <br>
+      <%= f.label :'Kontaktaufnahme:'%><br>
+      <%= f.radio_button :Kontaktaufnahme, 1%>1
+      <%= f.radio_button :Kontaktaufnahme, 2%>2
+      <%= f.radio_button :Kontaktaufnahme, 3%>3
+      <%= f.radio_button :Kontaktaufnahme, 4%>4
+      <%= f.radio_button :Kontaktaufnahme, 5%>5
+      <br>
+      <%= f.label :'Regeln einhalten:'%><br>
+      <%= f.radio_button :Regeln, 1%>1
+      <%= f.radio_button :Regeln, 2%>2
+      <%= f.radio_button :Regeln, 3%>3
+      <%= f.radio_button :Regeln, 4%>4
+      <%= f.radio_button :Regeln, 5%>5
+      <br>
+      <%= f.label :'Teamarbeit / Kooperation:'%><br>
+      <%= f.radio_button :Teamarbeit, 1%>1
+      <%= f.radio_button :Teamarbeit, 2%>2
+      <%= f.radio_button :Teamarbeit, 3%>3
+      <%= f.radio_button :Teamarbeit, 4%>4
+      <%= f.radio_button :Teamarbeit, 5%>5
+      <br>
+      <%= f.label :'Kritik:'%><br>
+      <%= f.radio_button :Kritik, 1%>1
+      <%= f.radio_button :Kritik, 2%>2
+      <%= f.radio_button :Kritik, 3%>3
+      <%= f.radio_button :Kritik, 4%>4
+      <%= f.radio_button :Kritik, 5%>5
+    </div>
 
-<h2>soziale Fähigkeiten</h2>
-<%= f.label :Durchsetzungsvermögen%>
-<%= f.number_field 'Durchsetzung', in: 1...6 %>
-<%= f.label :Kontaktaufnahme%>
-<%= f.number_field 'Kontaktaufnahme', in: 1...6 %>
-<%= f.label :'Regeln einhalten'%>
-<%= f.number_field 'Regeln', in: 1...6 %>
-<%= f.label :'Teamarbeit / Kooperation'%>
-<%= f.number_field 'Teamarbeit', in: 1...6 %>
-<%= f.label :Kritik%>
-<%= f.number_field 'Kritik', in: 1...6 %>
+    <div class="cardwrapper">
+      <div class="category">
+        <h2>kognitive Fähigkeiten</h2>
+      </div>
+      <%= f.label :'Aufmerksamkeit:'%><br>
+      <%= f.radio_button :Aufmerksamkeit, 1%>1
+      <%= f.radio_button :Aufmerksamkeit, 2%>2
+      <%= f.radio_button :Aufmerksamkeit, 3%>3
+      <%= f.radio_button :Aufmerksamkeit, 4%>4
+      <%= f.radio_button :Aufmerksamkeit, 5%>5
+      <br>
+      <%= f.label :'Ausdauer:'%><br>
+      <%= f.radio_button :Ausdauer, 1%>1
+      <%= f.radio_button :Ausdauer, 2%>2
+      <%= f.radio_button :Ausdauer, 3%>3
+      <%= f.radio_button :Ausdauer, 4%>4
+      <%= f.radio_button :Ausdauer, 5%>5
+      <br>
+      <%= f.label :'Konzentration:'%><br>
+      <%= f.radio_button :Konzentration, 1%>1
+      <%= f.radio_button :Konzentration, 2%>2
+      <%= f.radio_button :Konzentration, 3%>3
+      <%= f.radio_button :Konzentration, 4%>4
+      <%= f.radio_button :Konzentration, 5%>5
+      <br>
+      <%= f.label :'Merkfähigkeit:'%><br>
+      <%= f.radio_button :Merkfaehigkeit, 1%>1
+      <%= f.radio_button :Merkfaehigkeit, 2%>2
+      <%= f.radio_button :Merkfaehigkeit, 3%>3
+      <%= f.radio_button :Merkfaehigkeit, 4%>4
+      <%= f.radio_button :Merkfaehigkeit, 5%>5
+      <br>
+      <%= f.label :'sensorische Wahrnehmung:'%><br>
+      <%= f.radio_button :sensWahrnehmun, 1%>1
+      <%= f.radio_button :sensWahrnehmun, 2%>2
+      <%= f.radio_button :sensWahrnehmun, 3%>3
+      <%= f.radio_button :sensWahrnehmun, 4%>4
+      <%= f.radio_button :sensWahrnehmun, 5%>5
+      <br>
+      <%= f.label :'Sebstständigkeit:'%><br>
+      <%= f.radio_button :Selbststaendigkeit, 1%>1
+      <%= f.radio_button :Selbststaendigkeit, 2%>2
+      <%= f.radio_button :Selbststaendigkeit, 3%>3
+      <%= f.radio_button :Selbststaendigkeit, 4%>4
+      <%= f.radio_button :Selbststaendigkeit, 5%>5
+      <br>
+      <%= f.label :'Flexibilität:'%><br>
+      <%= f.radio_button :Flexibilitaet, 1%>1
+      <%= f.radio_button :Flexibilitaet, 2%>2
+      <%= f.radio_button :Flexibilitaet, 3%>3
+      <%= f.radio_button :Flexibilitaet, 4%>4
+      <%= f.radio_button :Flexibilitaet, 5%>5
+    </div>
 
-<h2>kognitive Fähigkeiten</h2>
-<%= f.label :Aufmerksamkeit%>
-<%= f.number_field 'Aufmerksamkeit', in: 1...6 %>
-<%= f.label :Ausdauer%>
-<%= f.number_field 'Ausdauer', in: 1...6 %>
-<%= f.label :Konzentration%>
-<%= f.number_field 'Konzentration', in: 1...6 %>
-<%= f.label :Merkfähigkeit%>
-<%= f.number_field 'Merkfaehigkeit', in: 1...6 %>
-<%= f.label :'sensorische Wahrnehmung'%>
-<%= f.number_field 'sensWahrnehmun', in: 1...6 %>
-<%= f.label :Sebstständigkeit%>
-<%= f.number_field 'Selbststaendigkeit', in: 1...6 %>
-<%= f.label :Flexibilität%>
-<%= f.number_field 'Flexibilitaet', in: 1...6 %>
-
-<h2>lebenspraktischer Bereich</h2>
-<%= f.label :Antrieb%>
-<%= f.number_field 'Antrieb', in: 1...6 %>
-<%= f.label :Entscheidungsfähigkeit%>
-<%= f.number_field 'Entscheidungsfaehigkeit', in: 1...6 %>
-<%= f.label :Feinmotorik%>
-<%= f.number_field 'Feinmotorik', in: 1...6 %>
-<%= f.label :'kritische Selbstkontrolle'%>
-<%= f.number_field 'Selbstkontrolle', in: 1...6 %>
-<%= f.label :Problemlösen%>
-<%= f.number_field 'Problemloesen', in: 1...6 %>
-<%= f.label :Sorgfalt%>
-<%= f.number_field 'Sorgfalt', in: 1...6 %>
-
+    <div class="cardwrapper">
+      <div class="category">
+        <h2>lebenspraktischer Bereich</h2>
+      </div>
+      <%= f.label :'Antrieb:'%><br>
+      <%= f.radio_button :Antrieb, 1%>1
+      <%= f.radio_button :Antrieb, 2%>2
+      <%= f.radio_button :Antrieb, 3%>3
+      <%= f.radio_button :Antrieb, 4%>4
+      <%= f.radio_button :Antrieb, 5%>5
+      <br>
+      <%= f.label :'Entscheidungsfähigkeit:'%><br>
+      <%= f.radio_button :Entscheidungsfaehigkeit, 1%>1
+      <%= f.radio_button :Entscheidungsfaehigkeit, 2%>2
+      <%= f.radio_button :Entscheidungsfaehigkeit, 3%>3
+      <%= f.radio_button :Entscheidungsfaehigkeit, 4%>4
+      <%= f.radio_button :Entscheidungsfaehigkeit, 5%>5
+      <br>
+      <%= f.label :'Feinmotorik:'%><br>
+      <%= f.radio_button :Feinmotorik, 1%>1
+      <%= f.radio_button :Feinmotorik, 2%>2
+      <%= f.radio_button :Feinmotorik, 3%>3
+      <%= f.radio_button :Feinmotorik, 4%>4
+      <%= f.radio_button :Feinmotorik, 5%>5
+      <br>
+      <%= f.label :'kritische Selbstkontrolle:'%><br>
+      <%= f.radio_button :Selbstkontrolle, 1%>1
+      <%= f.radio_button :Selbstkontrolle, 2%>2
+      <%= f.radio_button :Selbstkontrolle, 3%>3
+      <%= f.radio_button :Selbstkontrolle, 4%>4
+      <%= f.radio_button :Selbstkontrolle, 5%>5
+      <br>
+      <%= f.label :'Problemlösen:'%><br>
+      <%= f.radio_button :Problemloesen, 1%>1
+      <%= f.radio_button :Problemloesen, 2%>2
+      <%= f.radio_button :Problemloesen, 3%>3
+      <%= f.radio_button :Problemloesen, 4%>4
+      <%= f.radio_button :Problemloesen, 5%>5
+      <br>
+      <%= f.label :'Sorgfalt:'%><br>
+      <%= f.radio_button :Sorgfalt, 1%>1
+      <%= f.radio_button :Sorgfalt, 2%>2
+      <%= f.radio_button :Sorgfalt, 3%>3
+      <%= f.radio_button :Sorgfalt, 4%>4
+      <%= f.radio_button :Sorgfalt, 5%>5
+    </div>
+  </div>
 <%= f.submit "Fertig" %>
 <% end %>
+</div>
